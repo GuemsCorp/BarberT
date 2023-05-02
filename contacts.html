@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Contacts</title>
+</head>
+<body>
+        <!------------------------------------------- NAV BAR ------------------------->
+
+    <header id="HeaderAcceuil">
+        <nav id="Navbar">
+            <!-- LOGO Nav -->
+            <a href="index.html" class="LogoNav">
+                <img src="./Images/logo-removebg-preview.png" width="100" alt="LogoNav">
+            </a>
+
+            <!-- Menu Burger -->
+            <div class="MenuBurger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+
+            <!-- Menu du site -->
+            <div class="NavMenu cacher">
+             <a href="index.html">Acceuil</a>
+             <a href="https://www.instagram.com/barber_thy/" target="blank">Réservations</a>
+             <a href="contacts.html">Contacts</a>
+            </div>
+        </nav>
+<!------------------------------------------- FORMULAIRE ------------------------->
+        <div class="TitreContact">
+            <h2>Contacts</h2>
+        </div>
+        <div class="ReseauxContact">
+            <a href="https://www.instagram.com/barber_thy/"><i class="fa-brands fa-instagram-square"></i></a>
+            <a href="#"><i class="fa-brands fa-snapchat-square"></i></a>
+        </div>
+        <!-- L'attribut method spécifie comment envoyer les données du formulaire -->
+                              <!-- les données du formulaire sont envoyées à la page spécifiée dans l'attribut action -->
+                               <!--   Les données de formulaire peuvent être envoyées en tant que variables d'URL 
+                                    (avec method="get" ) ou en tant que transaction HTTP post (avec method="post" )
+                               -->
+        <div>
+            <form action="https://formspree.io/f/mqknwpgv" method="POST" onsubmit="return formconfig()">  
+
+                <input type="text" class="feedback-input" placeholder="Nom" name="name" required />   
+                <input type="text" class="feedback-input" placeholder="Email" name="Email" required />   
+                <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
+                <div class="g-recaptcha" data-sitekey="6LeSz94fAAAAAHbfKytzWJuNbGoWCKteAsUog5CB" data-callback="verifyCaptcha"></div> <!-- datasitekey: pour la clé de notre captcha version frontend (coté client) -->
+                <div id="g-recaptcha-error"></div> <!-- data-callback="verifyCaptcha: permet de vérifier si c'est bon, si ya erreur met une erreur -->
+                <button type="submit" class="btn">ENVOYER</button> 
+            </form>
+        </div>
+    </header>
+<script>
+    var recaptcha_response = '';
+
+    function formconfig(){
+        //Je vérifie si laréponse est vide
+        if(recaptcha_response.length == 0){
+            document.getElementById("g-recaptcha-error").innerHTML = `<span style ="color:red;" Validez le captcha avant lenvoie "</span>`;
+            return false;
+        }
+        /* Il renvoie 'false' pour une réponse vide. Cela signifie qu'un
+                  utilisateur n'a pas encore validé reCAPTCHA.
+
+                  Et donc, il ajoute une erreur à la div ayant l'id 'g-recaptcha-error'. */
+        return true;
+    }
+    
+    function verifyCaptcha(token){
+        recaptcha_response = token;
+        document.getElementById('g-recaptcha-error').innerHTML = ';';
+
+    }
+            
+</script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</body>
+</html>
