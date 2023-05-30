@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* adapter à la forme écran */
+}
+body{
+    background-image: url(../Images/bgheader.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+h1, h2{
+    font-family: 'MAUIKEA Demo', sans-serif;
+}
+    /*--------------- NavBar ------------*/
+#Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(253, 253, 253, 0);
+    padding-top: 10px;
+    /* padding-right: 25px; */
+}
+        /* Logo */
+.LogoNav{
+    padding-left: 20px;
+}
+
+    /*----------- Menu Burger---------*/
+.MenuBurger .line{
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: rgb(88, 85, 85);
+}
+
+/* Custom de mon burger les lignes */
+.line {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: silver;
+    margin-bottom: 7px;
+}
+
+.MenuBurger{
+    padding-right: 20px;
+    cursor: pointer;
+}
+/* Menu du site */
+.NavMenu{
+    
+    position: fixed; 
+    width: 94%;
+    top: 5rem;
+    left: 18px;
+    z-index: 999;
+    background-color:#cd2830d9;
+}
+
+.NavMenu a{
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    color: rgb(13, 67, 114);
+    text-decoration: none;
+    text-transform: uppercase; /* pour tout mettre en majuscule */
+    font-weight: bolder;
+}
+
+.NavMenu a:hover{
+    background-color:rgb(53, 53, 221);
+}
+        
+        /* Cacher le menu */
+
+
+.cacher{
+    display: none;
+}
+
+@media screen and (min-width:769px){
+    .NavMenu{
+        display: block;
+        position: static;
+        width: auto;
+        margin-right: 20px;
+        background: none;
+    }
+    .NavMenu a{
+        display:inline-block;
+        padding: 15px 20px;
+        color: black;
+    }
+    .MenuBurger{
+        display: none;
+    }
+}
+
+    /*------------------------ HEADER ---------------------*/
+/*
+#HeaderAcceuil{
+    width: 100%;
+    background-image: url(../Images/bgheader.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}*/
+
+.TextHeaderAcceuil{
+    text-align: center;
+    font-size: 56px;
+    color: rgb(219, 146, 52);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-180px, -100px);
+}
+/*------------------------- Page Contacts --------------*/
+
+.TitreContact{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-top: 50px;
+}
+
+.feuille{
+    width: 64%;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.formulaires{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.coordonnees{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 80px;
+    margin-left: 80px;
+    font-size: 16px;
+    color: white;
+}
+.infos a{
+    color: #ecd049;
+}
+.infos a:hover {
+    color: #db3134;
+}
+.formulaires{
+    margin-top: 15px;
+}
+
+.commentaires{
+    margin-top: 30px;
+}
+.commentaires textarea{
+    width: 800px;
+    height: 250px;
+    position: relative;
+    left: 30px;
+}
+/*----------------------------------- FOOTER ----------------------------*/
+#FooterContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #396ab2;
+    color: #cd282f;
+    background-color: rgb(0, 0, 0);
+}
+
+.Reseaux{
+    margin-top: 45px;
+    text-align: center;
+}
+
+.Paiements{
+    margin-top: 45px;
+}

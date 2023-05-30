@@ -91,6 +91,9 @@
 }
 
     /*------------------------ HEADER ---------------------*/
+h1, h2{
+    font-family: 'MAUIKEA Demo', sans-serif;
+}
 
 #HeaderAcceuil{
     height: 100vh;
@@ -116,7 +119,6 @@
     height: 100%;
     background-color: black;
     padding: 100px 0;
-    color: rgb(255, 255, 255);
 }
 #SectionUne h1{
     text-align: center;
@@ -131,6 +133,13 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
+.DivSectionUne h3{
+    transition: transform .3s;
+}
+.DivSectionUne :hover{
+    transform: scale(1.2);
+}
+
 .NomCoiffeur{
     text-align: center;
     -webkit-text-stroke: 1px;
@@ -277,57 +286,36 @@
     color: rgb(0, 0, 0);
     margin-bottom: 20px;
 }
-.ReseauxContact{
-    text-align: center;
-    font-size: 55px;
-    color: rgb(20, 68, 20);
 
+.feuille{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
-form { max-width:420px; margin:50px auto; }
-
-.feedback-input {
-  color:white;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight:500;
-  font-size: 18px;
-  border-radius: 5px;
-  line-height: 20px;
-  background-color: rgba(203, 201, 201, 0.821);
-  border:2px solid #CC6666;
-  transition: all 0.3s;
-  padding: 13px;
-  margin-bottom: 15px;
-  width:100%;
-  box-sizing: border-box;
-  outline:0;
+.formulaires{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
 }
 
-.feedback-input:focus { border:2px solid #CC4949; }
-
-textarea {
-  height: 150px;
-  line-height: 150%;
-  resize:vertical;
+.coordonnees{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 80px;
+    font-size: 13px;
+}
+.infos a{
+    color: #ecd049;
+}
+.infos a:hover {
+    color: #db3134;
 }
 
-[type="submit"] {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  width: 100%;
-  background:#cd282f;
-  border-radius:5px;
-  border:0;
-  cursor:pointer;
-  color:white;
-  font-size:24px;
-  padding-top:10px;
-  padding-bottom:10px;
-  transition: all 0.3s;
-  margin-top:-4px;
-  font-weight:700;
+.commentaires textarea{
+    width: 900px;
 }
-[type="submit"]:hover { background:#cd282f; }
 
-.fa-brands, .fab {
-    color: red;
-}
+/*------------------------- Page Prix --------------*/
