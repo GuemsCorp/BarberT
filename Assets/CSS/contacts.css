@@ -102,7 +102,7 @@ h1, h2{
 
     /*------------------------ HEADER ---------------------*/
 /*
-#HeaderAcceuil{
+#headerHome{
     width: 100%;
     background-image: url(../Images/bgheader.jpg);
     background-size: cover;
@@ -110,7 +110,7 @@ h1, h2{
     background-repeat: no-repeat;
 }*/
 
-.TextHeaderAcceuil{
+.TextheaderHome{
     text-align: center;
     font-size: 56px;
     color: rgb(219, 146, 52);

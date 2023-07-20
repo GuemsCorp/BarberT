@@ -7,7 +7,7 @@
     <meta name="Description" content="Site de salon de Coiffure dans lequel vous trouverez nos coiffeurs, modèles, coiffures, prix, adresse, horaires d'ouverture">
     <meta name="Keywords" content="BarbierArgenteuil, CoiffureArgenteuil, CoiffeurAfro95Argenteuil,BarberShopArgenteuil,TeintureArgenteuil, TeintureHommeBlack, CoupeCourteHomme,TressePlaquéeHomme">
     <meta name="Author" content="GCorp's">
-    <meta name="Copyright" content="Barber Thy 2022">
+    <meta name="Copyright" content="Barber Thy 2023">
     <meta name="Content-Language" content="fr">
     <meta name="Subject" content="Site vitrine">
     <meta name="Publisher" content="GCorp's">
@@ -26,13 +26,13 @@
 <body>
     <!------------------------------------------- NAV BAR ------------------------->
 
-    <header id="HeaderAcceuil">
-        <nav id="Navbar">
+    <header id="headerHome">
+    <nav id="Navbar">
             <!-- LOGO Nav -->
             <a href="index.html" class="LogoNav">
                 <img src="./Assets/Images/logo-removebg-preview.png" width="100" alt="LogoNav">
             </a>
-
+        
             <!-- Menu Burger -->
             <div class="MenuBurger">
                 <span class="line"></span>
@@ -41,25 +41,28 @@
             </div>
 
             <!-- Menu du site -->
+            
             <div class="NavMenu cacher">
-             <a href="index.html">Acceuil</a>
-             <a href="galerie.html">Galerie</a>
-             <a href="prix.html">Prix</a>
-             <a href="reservations.html">Réservations</a>
-             <a href="contacts.html">Contacts</a>
+                <a href="index.php">Accueil</a>
+                <a href="galerie.php">Galerie</a>
+                <a href="price.php">Prix</a>
+                <a href="reservations.php">Réservations</a>
+                <a href="contacts.php">Contacts</a>
             </div>
-
-            <div class="TextHeaderAcceuil">
-                <h1>Barber Thy</h1> 
+            <div class="NavMenu cacher">
+                <a href="./login/login.html">Connexion/Inscription</a>
             </div>
+            
         </nav>
-
+        <div class="TextheaderHome">
+            <h1>Barber Thy</h1> 
+        </div>
     </header>
     
 <main>
     <!-------------------------- SECTION UNE ------------------>
-       <section id="SectionUne">
-           <h1>Nos Coiffeurs</h1>
+    <section id="SectionUne">
+        <h1>Nos Coiffeurs</h1>
 
         <div class="SectionUneContainer">
             <div class="DivSectionUne">
@@ -75,13 +78,15 @@
                 <h3 class="NomCoiffeur"> Moussa</h3>
             </div>
             <div class="DivSectionUne">
-                <img src="./Assets/Images/coiffeur.jpeg" width="250" height="300" alt="Sylvain">
-                <h3 class="NomCoiffeur"> Sylvain</h3>
+                <a href="#">
+                    <img src="./Assets/Images/coiffeur.jpeg" width="250" height="300" alt="Sylvain">
+                    <h3 class="NomCoiffeur"> Sylvain</h3>
+                </a>
             </div>
         </div>
-        </section> 
+    </section> 
 
-    <!-------------------------- SECTION DEUX ------------------>
+<!--------------------------- SECTION DEUX ------------------>
     <section id="SectionDeux">
         <div class="SectionDeuxContainer">
             <h1>Barber Thy</h1>
@@ -108,9 +113,12 @@
                     <img src="./Assets/Images/coiffreb.jpg" width="250" height="300" alt="Coiffure Homme">
                 </div>
             </div>
+
+            <div class="voirgalerie"><a href="./galerie.php">Voir galerie</a></div>
+
         </section>
 
-        <!-------------------------- SECTION QUATRE ------------------>
+<!-------------------------- SECTION QUATRE ----------------------->
         <section id="SectionQuatre">
             <h1>Nos Prestations</h1>
             <div class="SectionQuatreContainer">
@@ -132,37 +140,10 @@
             </div>
         </section>
     </main>
-        <!-------------------------- FOOTER ------------------>
-        <footer>
-            <section id="FooterContainer">
-                <!-- LOGO footer -->
-            <div class="LogoFooter">
-                <a href="index.html" class="LogoNav">
-                    <img src="./Assets/Images/logo-removebg-preview.png" width="100" alt="LogoFooter">
-                </a>
-            </div>
-            <!-- Reseaux sociaux footer -->
-            <div class="Reseaux">
-                <a href="https://www.instagram.com/barber_thy/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-snapchat"></i></a>
-                <h3>Barber-thy</h3>
-                <p>lundi au dimanche de 10h30 à 19h30</p>
-                <p>78 avenue Stalingrad, 95100 Argenteuil</p>
-            </div>
-            
-            <!-- Moyens de Paiements footer -->
-            <div class="Paiements">
-                <a href="#"><i class="fa-brands fa-cc-mastercard"></i></a>
-                <a href="#"><i class="fa-solid fa-money-bill"></i></a>
-                <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
-                <a href="#"><i class="fa-brands fa-cc-apple-pay"></i></a>
-                <p>copyright 2022</p>
-            </div>    
-            </section>
-            
-        </footer>
-
-        <script src="./Javascript/index.js"></script>
-    
+<!---------------------------- FOOTER ----------------------->
+<?php
+    include("./fonctions/footer.php");
+?>
+    <script src="./index.js"></script>
 </body>
 </html>
